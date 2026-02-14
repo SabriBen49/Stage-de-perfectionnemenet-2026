@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "name": "Dwexo Auth Test",
+  "version": "1.0",
+  "description": "Test popup auth and LinkedIn profile capture",
+
+  "permissions": [
+    "storage",
+    "contextMenus",
+    "tabs",
+    "notifications",
+    "scripting"
+
+
+  ],
+
+  "host_permissions": [
+    "https://www.linkedin.com/*",
+    "https://*.supabase.co/*"
+
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["https://www.linkedin.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+
+  "background": {
+  "service_worker": "background.js",
+  "type": "module"
+},
+   "icons": {
+    "16": "assets/logo4.png",
+    "32": "assets/logo4.png",
+    "48": "assets/logo4.png",
+    "128": "assets/logo4.png"
+  },
+  "action": {
+    "default_icon": {
+    "16": "assets/logo4.png",
+    "48": "assets/logo4.png",
+    "128": "assets/logo4.png"
+  },
+    "default_popup": "popup.html"
+  }
+}
