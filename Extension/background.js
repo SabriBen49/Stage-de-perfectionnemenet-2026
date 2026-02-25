@@ -1,6 +1,6 @@
 import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm';
 
-// Context menu creation
+
 chrome.runtime.onInstalled.addListener(() => {
   chrome.contextMenus.create({
     id: "add-to-dwexo",
@@ -10,7 +10,7 @@ chrome.runtime.onInstalled.addListener(() => {
   });
 });
 
-// Notification helper
+
 function showTempNotification(title, message) {
   chrome.notifications.create(
     "DWEXO_NOTIFICATION",
@@ -28,11 +28,11 @@ function showTempNotification(title, message) {
   );
 }
 
-// Context menu click handler
+
 chrome.contextMenus.onClicked.addListener((info, tab) => {
   if (info.menuItemId !== "add-to-dwexo") return;
 
-  // Ensure we are on a LinkedIn profile page
+
   if (!tab.url.startsWith("https://www.linkedin.com/in/")) {
     showTempNotification(
       "Erreur",
@@ -62,7 +62,7 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
       },
     });
 
-    // Inject content script if not already present
+
     try {
       await chrome.scripting.executeScript({
         target: { tabId: tab.id },
@@ -72,7 +72,7 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
       console.error("Failed to inject content script:", err);
     }
 
-    // Send message to content script
+    
     chrome.tabs.sendMessage(tab.id, { action: "GET_LINKEDIN_PROFILE" }, async (profile) => {
       if (chrome.runtime.lastError) {
         console.error("Message error:", chrome.runtime.lastError.message);
@@ -94,7 +94,7 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
 
       console.log("Received profile:", profile);
 
-      // Check if profile already exists in Supabase
+     
       const { data: existingProfiles, error: fetchError } = await supabaseAuth
         .from("contacts")
         .select("*")
@@ -131,7 +131,7 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
     const { error: upsertError } = await supabaseAuth
   .from("contacts")
   .upsert({
-    id: user.id,            // matches RLS
+    id: user.id,           
     linkedinUrl: profile.linkedinUrl,
     name: profile.name,
     title: profile.title,
@@ -151,3 +151,4 @@ if (upsertError) {
     });
   });
 });
+
