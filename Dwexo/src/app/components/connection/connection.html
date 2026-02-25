@@ -1,0 +1,62 @@
+<div class="auth-page">
+  <!-- Header -->
+  <header class="top-bar">
+    <div class="social">
+      <a href="https://www.linkedin.com/company/dwexo" target="_blank"><span class="icon fb">f</span></a>
+      <a href="https://www.facebook.com/Dweexo" target="_blank"><span class="icon in">in</span></a>
+    </div>
+    <a routerLink="/acceuil" routerlinkactive="active"><div class="brand-link">dwexo.com</div></a>
+  </header>
+
+  <div class="auth-container">
+    <div class="auth-form">
+      <div class="logo">DWEXO<span class="dot">+</span></div>
+
+      <h2>CONNECTION</h2>
+
+      <form>
+        <div class="input-group">
+          <span class="input-icon">@</span>
+          <input id="email" type="email" placeholder="Email" />
+        </div>
+
+        <div class="input-group">
+          <span class="input-icon">🔒</span>
+          <input id="password" type="password" placeholder="Password" />
+          <span (click)="togglePassword()" class="toggle">👁</span>
+        </div>
+         @if (msg) {
+        <div class="message">{{ msg }}</div>
+        }
+        <button type="button" (click)="login()" class="btn primary">SE CONNECTER</button>
+<button  type="button" class="btn secondary" [routerLink]="'/inscription'" routerLinkActive="active">
+  CRÉER UN COMPTE
+</button>
+
+      </form>
+    </div>
+
+<div class="auth-illustration">
+  <div class="scroll-track">
+    <div class="scroll-set">
+      <img src="gallery/img1.svg" />
+      <img src="gallery/img2.svg" />
+      <img src="gallery/img3.svg" />
+      <img src="gallery/img4.svg" />
+      <img src="gallery/img5.svg" />
+    </div>
+
+    <!-- duplicate -->
+    <div class="scroll-set">
+      <img src="gallery/img1.svg" />
+      <img src="gallery/img2.svg" />
+      <img src="gallery/img3.svg" />
+      <img src="gallery/img4.svg" />
+      <img src="gallery/img5.svg" />  
+    </div>
+  </div>
+</div>
+
+
+  </div>
+</div>

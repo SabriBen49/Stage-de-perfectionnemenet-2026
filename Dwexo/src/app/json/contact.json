@@ -1,0 +1,74 @@
+{
+  "contacts": [
+    {
+      "id": "667c",
+      "name": "NAJOUA BEN SLIMA",
+      "title": "SRE",
+      "location": "Ariana Ville, Ariana, Tunisia",
+      "linkedinUrl": "https://www.linkedin.com/in/najoua-ben-slima/"
+    },
+    {
+      "id": "31d4",
+      "name": "Salma Tlatli",
+      "title": "Site Reliability Engineer (SRE)",
+      "location": "Tunis, Tunisia",
+      "linkedinUrl": "https://www.linkedin.com/in/salma-tlatli/"
+    },
+    {
+      "id": "99bf",
+      "name": "Nicolas Huret",
+      "title": "Vice-président opérations @ IG1",
+      "location": "Louveciennes, Île-de-France, France",
+      "linkedinUrl": "https://www.linkedin.com/in/nicolashuret/"
+    },
+    {
+      "id": "ecf9",
+      "name": "Oussama Jlassi",
+      "title": "SRE at Iguane solutions",
+      "location": "Tunis, Tunisia",
+      "linkedinUrl": "https://www.linkedin.com/in/oussama-jlassi-133349155/"
+    },
+    {
+      "id": "3d7a",
+      "name": "Salma Kennou",
+      "title": "Junior developer with a bachelor's degree in Embedded Systems, experienced in real-time systems, microcontroller programming, IoT applications, and AI-driven embedded systems.",
+      "location": "Tunis, Tunisia",
+      "linkedinUrl": "https://www.linkedin.com/in/salma-kennou/"
+    },
+    {
+      "id": "0877",
+      "name": "Salma Seddik",
+      "title": "Software Engineer",
+      "location": "Grand Tunis Metropolitan Area",
+      "linkedinUrl": "https://www.linkedin.com/in/salma-seddik/"
+    },
+    {
+      "id": "d9c1",
+      "name": "Jihen Zitouni",
+      "title": "Quality Manager | Process Improvement | Performance Optimization | Business management | Consulting | Training & Development",
+      "location": "Tunis, Tunisia",
+      "linkedinUrl": "https://www.linkedin.com/in/jihenzitouni/"
+    },
+    {
+      "id": "880d",
+      "name": "Ismahene Ben Boubaker",
+      "title": "Assistance en Records Management",
+      "location": "Tunis, Tunisia",
+      "linkedinUrl": "https://www.linkedin.com/in/ismahene-ben-boubaker-bb3a531b0/"
+    },
+    {
+      "id": "6845",
+      "name": "Tarek Ben Boubaker",
+      "title": "Accountant, Cashier, Data entry | Excel, Pixel CRM",
+      "location": "Carthage, Tunis, Tunisia",
+      "linkedinUrl": "https://www.linkedin.com/in/tarek-ben-boubaker-5487b4145/"
+    },
+    {
+      "id": "a089",
+      "name": "Manel Bouraoui",
+      "title": "Étudiant à IMSET",
+      "location": "Gabes, Gabès, Tunisia",
+      "linkedinUrl": "https://www.linkedin.com/in/manel-bouraoui-512179232/"
+    }
+  ]
+}

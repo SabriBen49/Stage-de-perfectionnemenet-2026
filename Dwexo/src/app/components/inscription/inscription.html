@@ -1,0 +1,79 @@
+<div class="auth-page">
+  <!-- Header -->
+  <header class="top-bar">
+    <div class="social">
+      <a href="https://www.linkedin.com/company/dwexo" target="_blank"><span class="icon fb">f</span></a>
+      <a href="https://www.facebook.com/Dweexo" target="_blank"><span class="icon in">in</span></a>
+    </div>
+    <a routerLink="/acceuil" routerlinkactive="active"><div class="brand-link">dwexo.com</div></a>
+  </header>
+
+  <div class="auth-container">
+    <div class="auth-form">
+      <div class="logo">DWEXO<span class="dot">+</span></div>
+
+      <h2>INSCRIPTION</h2>
+
+      <form [formGroup]="signupForm">
+        <div class="input-group">
+          <span class="input-icon">@</span>
+          <input type="email" placeholder="Email" formControlName="email">
+        </div>
+        <div class="message" *ngIf="email?.invalid && (email?.touched || email?.dirty)">
+          <span *ngIf="email?.errors?.['required']">Email is required.</span>
+          <span *ngIf="email?.errors?.['email']">Enter a valid email.</span>
+        </div>
+
+        <div class="input-group">
+          <span class="input-icon">🔒</span>
+          <input id="password" type="password" placeholder="Password" formControlName="password"/>
+          <span (click)="togglePassword()" class="toggle">👁</span>
+        </div>
+        <div class="message" *ngIf="password?.invalid && (password?.touched || password?.dirty)">
+          <span *ngIf="password?.errors?.['required']">Password is required.</span>
+          <span *ngIf="password?.errors?.['minlength']">
+            Password must be at least 7 characters.
+          </span>
+          <span *ngIf="password?.errors?.['pattern']">
+            Password must include a number and a special character.
+          </span>
+        </div>
+        @if (msg) {
+        <div class="message">{{ msg }}</div>
+        }
+        <button type="button" (click)="signup()" class="btn primary">S’INSCRIRE</button>
+        <button [routerLink]="'/connection'" routerLinkActive="active" class="btn secondary" type="button">DEJA
+          COMPTE</button>
+      </form>
+    </div>
+
+    <div class="auth-illustration">
+      <div class="scroll-track">
+        <div class="scroll-set">
+          <img src="gallery/img1.svg" />
+
+          <img src="gallery/img2.svg" />
+
+          <img src="gallery/img3.svg" />
+
+          <img src="gallery/img4.svg" />
+
+          <img src="gallery/img5.svg" />
+        </div>
+
+        <div class="scroll-set">
+          <img src="gallery/img1.svg" />
+
+          <img src="gallery/img2.svg" />
+
+          <img src="gallery/img3.svg" />
+
+          <img src="gallery/img4.svg" />
+
+          <img src="gallery/img5.svg" />
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

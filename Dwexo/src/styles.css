@@ -1,0 +1,23 @@
+body {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 0, 43, 0.15) 0%,
+    rgba(255, 0, 43, 0.08) 100px,
+    rgba(255, 255, 255, 1) 200px
+  );
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  text-align: center;
+}
+app-nav {
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent;
+  padding: 20px 0;
+
+}
+router-outlet {
+  position: relative;
+  
+}
