@@ -5,11 +5,12 @@ export default defineConfig({
     outDir: "dist",
     emptyOutDir: true,
     rollupOptions: {
-      input: "popup.js",           // source file
+      input: "popup.js",          
       output: {
         entryFileNames: "popup.js",
-        format: "iife",            // <-- IMPORTANT: wraps everything in an immediately-invoked function
+        format: "iife",           
       }
     }
   }
 });
+
